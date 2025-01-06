@@ -35,11 +35,11 @@ function Register() {
               </div>
               <div>
                   <label>Email</label>
-                  <input placeholder="Enter Email addresh" />
+                  <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="Enter Email addresh" />
               </div>
               <div>
                   <label>Mobile </label>
-                  <input placeholder="Enter Mobile Number " />
+                  <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="Enter Mobile Number " />
               </div>
               <div>
                   <label>Gender </label>
@@ -55,11 +55,10 @@ function Register() {
               </div>  
               <div>
                 <label>Create Your Password</label>
-                <input placeholder="**********" ></input>
+                <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="**********" ></input>
                 <label>Confirm   Your Password</label>
-                <input placeholder="**********" ></input>
+                <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="**********" ></input>
               </div>
-
             </from>
           </div>
         </div>
@@ -69,3 +68,4 @@ function Register() {
 }
 
 export default Register;
+
