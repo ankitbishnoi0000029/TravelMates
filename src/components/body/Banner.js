@@ -3,7 +3,7 @@ import React from "react";
 function Banner() {
   return (
     <section>
-      <div className="container ">
+ 
         <div className="grid h-full grid-cols-12 bg-[url('/banner/banner_bg.png')] ">
           <div className="col-span-4 py-12 flex items-center justify-end ">
             <div className="border-4 rounded-2xl border-white p-8 text-white ">
@@ -61,12 +61,12 @@ function Banner() {
             </div>
           </div>
           <div className="col-span-8 px-10 w-full">
-            <div className="grid h-full justify-items-end items-end">
-              <img className="relative w-[65%]" src="banner/banner.png" />
+            <div className="grid h-full justify-items-center items-end">
+              <img className="relative z-10 h-[90%]" src="banner/banner.png" />
             </div>
           </div>
         </div>
-      </div>
+  
     </section>
   );
 }

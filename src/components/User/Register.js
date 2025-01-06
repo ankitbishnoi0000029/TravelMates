@@ -1,66 +1,176 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+import { useForm } from "react-hook-form";
 
 function Register() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
+  console.log(watch("name"), ">>>>>>>>>>>>"); 
+
   return (
-    <div  >
-      <div className="w-full mx-auto flex justify-center items-center ">
-        <div className="text-3xl text-slate-800 max-w-fit text-center p-10 ">
-          <h3>Create your Account </h3>
-          <p className="text-lg text-slate-500 ">
-            Create account and find your mate with us!
+    <div>
+      {/* Header Section */}
+      <div className="w-full bg-[url('/banner/banner_bg.png')] text-white mx-auto flex justify-center items-center">
+        <div className="text-3xl max-w-fit text-center p-10">
+          <h3 className="font-medium">Create your Account</h3>
+          <p className="text-lg text-slate-400">
+            Create an account and find your mate with us!
           </p>
         </div>
       </div>
-      <div className="flex bg-pink-50">
-        <div>
-          <Image
-            height={400}
-            width={400}
-            src="/login/register.png"
-            alt="Register image "
-          />
-        </div>
-        <div>
-          <div>
-            <h1>Fill out the form to get started</h1>
-          </div>
-          <div>
-            <from>
-              <div>
-                <label>first Name</label>
-                <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="Enter first Name"  />
-                <label>first Name</label>
-                <input placeholder="Enter first Name"  /> 
+
+      <div className="bg-[#391965] md:grid-cols-2 items-center text-white p-6">
+        <div className="max-w-xl mx-auto border-4 rounded-lg border-white p-6 mt-4 md:mt-0">
+          <h1 className="text-2xl font-semibold mb-4">
+            Fill out the form to get started
+          </h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="space-y-4">
+              {/* Name */}
+              <div className="flex items-center justify-between">
+                <label>Enter Your Name</label>
+                <input
+                  {...register("name",{required :true })}
+                  name="name"
+                  placeholder="Enter Your Name"
+                  type="text"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
               </div>
-              <div>
-                  <label>Email</label>
-                  <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="Enter Email addresh" />
+
+              {/* Email */}
+              <div className="flex items-center justify-between">
+                <label>Enter your Email</label>
+                <input
+                  {...register("email")}
+                  placeholder="Enter Your Email"
+                  type="email"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
               </div>
-              <div>
-                  <label>Mobile </label>
-                  <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="Enter Mobile Number " />
+
+              {/* Mobile */}
+              <div className="flex items-center justify-between">
+                <label>Enter Mobile Number</label>
+                <input
+                 {...register("number")}
+                  placeholder="Enter Your Number"
+                  type="text"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
               </div>
-              <div>
-                  <label>Gender </label>
-                  <select>
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                  <label>Country </label>
-                  <select>
-                    <option>India</option>
-                    <option>Usa</option>
-                  </select>
-              </div>  
-              <div>
-                <label>Create Your Password</label>
-                <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="**********" ></input>
-                <label>Confirm   Your Password</label>
-                <input className="border-2 border-gray-300 p-2 rounded-lg" placeholder="**********" ></input>
+
+              {/* Username */}
+              <div className="flex items-center justify-between">
+                <label>Create Username</label>
+                <input
+                  {...register("username")}
+                  placeholder="Create Your UserName"
+                  type="text"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
               </div>
-            </from>
-          </div>
+
+              {/* Gender */}
+              <div className="flex items-center justify-between">
+                <label>Select Your Gender</label>
+                <select
+                  {...register("gender")}
+                className="border w-[65%] border-white/10 rounded-lg p-2.5 px-3.5 outline-none bg-transparent">
+                  <option className="text-pink-600 ">Select Gender</option>
+                  <option className="text-pink-600 ">Male</option>
+                  <option className="text-pink-600 ">Female</option>
+                  <option className="text-pink-600 ">Other</option>
+                </select>
+              </div>
+
+              {/* Country */}
+              <div className="flex items-center justify-between">
+                <label>Select Your Country</label>
+
+                <select
+                  {...register("country")}
+                className="border w-[65%] border-white/10 rounded-lg p-2.5 px-3.5 outline-none bg-transparent">
+                  <option className="text-pink-600 ">Select Gender</option>
+                  <option className="text-pink-600 ">Male</option>
+                  <option className="text-pink-600 ">Female</option>
+                  <option className="text-pink-600 ">Other</option>
+                </select>
+              </div>
+
+              {/* State */}
+              <div className="flex items-center justify-between">
+                <label>Select Your State</label>
+                <select
+                  {...register("state")}
+                
+                className="border w-[65%] border-white/10 rounded-lg p-2.5 px-3.5 outline-none bg-transparent">
+                  <option className="text-pink-600 ">Select Gender</option>
+                  <option className="text-pink-600 ">Male</option>
+                  <option className="text-pink-600 ">Female</option>
+                  <option className="text-pink-600 ">Other</option>
+                </select>
+              </div>
+
+              {/* City */}
+              <div className="flex items-center justify-between">
+                <label>Select Your City</label>
+                <select
+                  {...register("city")}
+                className="border w-[65%] border-white/10 rounded-lg p-2.5 px-3.5 outline-none bg-transparent">
+                  <option className="text-pink-600 ">Select Gender</option>
+                  <option className="text-pink-600 ">Male</option>
+                  <option className="text-pink-600 ">Female</option>
+                  <option className="text-pink-600 ">Other</option>
+                </select>
+              </div>
+
+              {/* Full Address */}
+              <div className="flex items-center justify-between">
+                <label>Enter Your Full Address</label>
+                <input
+                {...register("addresh")}
+                  placeholder="Enter Your Addresh"
+                  type="text"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
+              </div>
+
+              {/* Password */}
+              <div className="flex items-center justify-between">
+                <label>Create Password</label>
+                <input
+                {...register("password")}
+                  placeholder="Enter Your Password"
+                  type="password"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
+              </div>
+
+              {/* Confirm Password */}
+              <div className="flex items-center justify-between">
+                <label>Confirm Password</label>
+                <input
+                {...register("confirmPassword")}
+                  placeholder="Enter Confirm password"
+                  type="password"
+                  className="border rounded-lg w-[65%] border-white/10 p-2.5 px-3.5 outline-none bg-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <div className="p-2 my-4 rounded-lg bg-pink-600">
+              <button className="w-full p-2 text-white font-semibold rounded-lg">
+                Sign Up
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -68,4 +178,3 @@ function Register() {
 }
 
 export default Register;
-
