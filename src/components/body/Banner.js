@@ -8,11 +8,9 @@ function Banner() {
           <div className="col-span-4 py-12 flex items-center justify-end ">
             <div className="border-4 rounded-2xl border-white p-8 text-white ">
               <div>
-                <h1 className="text-3xl font-bold py-3">Introducing TuruLav</h1>
-                <p className="py-2 font-serif">
-                  Serious Dating With TuruLav Your Perfect
-                </p>
-                <p className="pb-2 font-serif">Match is Just a Click Away.</p>
+                <h1 className="text-3xl font-bold py-3">can you join me ?</h1>
+                
+                <p className="pb-2 font-serif">Create a post For Your Trip.</p>
                 <div>
                   <div>
                     <from>
@@ -48,12 +46,12 @@ function Banner() {
                         <input className="border rounded-lg w-[65%] border-white/10  p-2.5 px-3.5 outline-none bg-transparent"></input>
                       </div>
                       <div className="flex  pb-2 items-center font-serif justify-between">
-                        <label> City </label>
-                        <input className="border rounded-lg w-[65%] border-white/10  p-2.5 px-3.5 outline-none bg-transparent"></input>
+                        <label> Description  </label>
+                        <textarea type="text-area" className="border rounded-lg w-[65%] border-white/10  p-2.5 px-3.5 outline-none bg-transparent"></textarea>
                       </div>
                     </from>
                     <div className="p-2 my-4 rounded-lg bg-pink-600">
-                      <button className="w-full">SignUp</button>
+                      <button className="w-full">Create Post</button>
                     </div>
                   </div>
                 </div>

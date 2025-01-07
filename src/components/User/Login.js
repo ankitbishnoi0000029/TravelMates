@@ -16,7 +16,7 @@ function Login() {
 
       {/* Form and Image Section */}
       <div className="bg-[#391965] md:grid-cols-2 items-center text-white p-6">
-        <div className="max-w-xl mx-auto border-4 rounded-lg border-white p-6 mt-4 md:mt-0">
+        <div className="max-w-xl mx-auto  rounded-lg  p-6 mt-4 md:mt-0">
           <form>
             <div className="space-y-4">
           
