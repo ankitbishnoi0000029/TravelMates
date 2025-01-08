@@ -11,9 +11,9 @@ function Posts() {
             </h1>
         </div>
         <div className='py-4 px-12 bg-[url("/banner/banner_bg.png")]' >
-        <div class="flex">
-  <div class="w-1/4 "><SideBar_profile /></div> 
-  <div class="w-3/4  overflow-auto "><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /></div>
+        <div className="flex">
+  <div className="w-1/4 "><SideBar_profile /></div> 
+  <div className="w-3/4  overflow-auto  "><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /><PostCard /></div>
   
 </div>
         

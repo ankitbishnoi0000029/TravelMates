@@ -7,13 +7,13 @@ import { FaRegCommentDots } from "react-icons/fa6";
 function PostCard() {
   return (
     <div>
-      <div className="text-white flex items-center justify-between ">
+      <div className="text-white flex items-center py-4 justify-between ">
         <div className="flex  items-center ">
-          <div class="w-12 h-12 overflow-hidden rounded-full">
+          <div className="w-12 h-12 overflow-hidden rounded-full">
             <img
               src="/posts/woman.jpg"
               alt="profile"
-              class="object-cover w-full h-full"
+              className="object-cover w-full h-full"
             />
           </div>
           <div className="px-4 text-sm">
@@ -29,13 +29,13 @@ function PostCard() {
           <BsThreeDots />
         </div>
       </div>
-      <div className="py-6">
+      <div >
         <div className=" rounded-2xl h-[70vh] overflow-hidden ">
-          <img src="/posts/post.jpg" class="object-cover w-full h-full" />
+          <img src="/posts/post.jpg" className="object-cover w-full h-full" />
         </div>
       </div>
 
-      <div className="flex justify-between text-lg text-pink-500 font-bold items-center">
+      <div className="flex py-6  justify-between text-lg text-pink-500 font-bold items-center">
         <button className="  w-full rounded-md pl-4 p-4   bottom-1 bg-white flex justify-center items-center gap-1 ">
           Like <CiHeart />{" "}
         </button>
